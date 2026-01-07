@@ -32,6 +32,7 @@ CHECK_PKGS=(
   luci-i18n-adguardhome-zh-cn
   luci-app-adguardhome
   nikki
+  opkg
   luci-app-nikki
   luci-i18n-nikki-zh-cn
   cloudflared
