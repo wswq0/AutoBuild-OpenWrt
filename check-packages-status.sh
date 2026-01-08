@@ -22,6 +22,7 @@ SSH_WAIT_TIMEOUT=120
 ##################################################
 CHECK_PKGS=(
   luci-app-ttyd
+  unblockneteasemusic
   nano
   luci-app-oaf
   mosdns
