@@ -71,6 +71,7 @@ jobs:
           FILE=$(ls $GITHUB_WORKSPACE/immortalwrt/immortalwrt*.sh | sed -n '2p')
           chmod +x "$FILE"
           "$FILE"
+          make defconfig
       - name: download
         run: |
           cd $WORKDIR
