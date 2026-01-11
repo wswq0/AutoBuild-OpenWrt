@@ -96,6 +96,7 @@ jobs:
       - name: Package bin
         run: |
           cd $WORKDIR
+          rm -rf bin/packages
           zip -r openwrt_bin.zip bin
 
       - name: Upload artifact
