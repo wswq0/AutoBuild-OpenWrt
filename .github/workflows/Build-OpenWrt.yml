@@ -97,6 +97,8 @@ jobs:
         run: |
           cd $WORKDIR
           rm -rf bin/packages
+          #
+          rm -rf bin/targets/*/*/packages || true
           zip -r openwrt_bin.zip bin
 
       - name: Upload artifact
