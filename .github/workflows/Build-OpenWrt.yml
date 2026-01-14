@@ -104,7 +104,7 @@ jobs:
       - name: Package targets
         run: |
           cd $WORKDIR
-          ls bin/targets/*/*
+          ls bin/targets/*/* 2>/dev/null || true
           zip -j openwrt_targets.zip bin/targets/*/*
 
       - name: Upload artifact
