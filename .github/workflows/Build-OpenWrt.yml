@@ -81,7 +81,7 @@ jobs:
           chmod +x $GITHUB_WORKSPACE/check-packages-status.sh
           bash $GITHUB_WORKSPACE/check-packages-status.sh
           chmod +x $GITHUB_WORKSPACE/auto-fix-packages-openwrt.sh
-          #####删除注释恢复运行#####
+          # ####删除注释恢复运行#####
           #bash $GITHUB_WORKSPACE/auto-fix-packages-openwrt.sh
       - name: Compile
         run: |
@@ -100,7 +100,7 @@ jobs:
           rm -rf bin/packages || true
           rm -rf bin/targets/*/*/packages || true
           
-          #如果未来目录层级产生变化使用以下命令删除packages
+          # 如果未来目录层级产生变化使用以下命令删除packages
           # find bin -type d -name packages -exec rm -rf {} + || true
       - name: Package targets
         run: |
