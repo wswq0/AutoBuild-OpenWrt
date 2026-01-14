@@ -101,7 +101,8 @@ jobs:
           rm -rf bin/targets/*/*/packages || true
           #如果未来目录层级产生变化使用以下命令删除packages
           ＃find bin -type d -name packages -exec rm -rf {} + || true
-          zip -j openwrt_targets.zip /bin/targets/*/*
+          ls bin/targets/*/*
+          zip -j openwrt_targets.zip bin/targets/*/*
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
