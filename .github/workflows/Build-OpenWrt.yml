@@ -104,6 +104,8 @@ jobs:
       - name: Package targets
         run: |
           cd $WORKDIR
+          rm -f openwrt_targets.zip || true
+          ls -lh openwrt_targets.zip || echo "zip 不存在"
           find bin/targets -maxdepth 3 -type f ! -path "*/packages/*" -print | zip -j openwrt_targets.zip -@
           
 
