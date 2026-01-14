@@ -104,7 +104,8 @@ jobs:
       - name: Package targets
         run: |
           cd $WORKDIR
-          find bin/targets -maxdepth 3 -type f ! -path "*/packages/*" -print \zip -j openwrt_targets.zip -@
+          find bin/targets -maxdepth 3 -type f ! -path "*/packages/*" -print \
+          zip -j openwrt_targets.zip -@
           
 
       - name: Upload artifact
