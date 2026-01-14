@@ -99,8 +99,9 @@ jobs:
           cd $WORKDIR
           rm -rf bin/packages || true
           rm -rf bin/targets/*/*/packages || true
+          
           #如果未来目录层级产生变化使用以下命令删除packages
-          ＃find bin -type d -name packages -exec rm -rf {} + || true
+          # find bin -type d -name packages -exec rm -rf {} + || true
       - name: Package targets
         run: |
           cd $WORKDIR
