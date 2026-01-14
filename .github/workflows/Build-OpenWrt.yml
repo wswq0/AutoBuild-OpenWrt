@@ -94,13 +94,16 @@ jobs:
      
      
         
-      - name: Package targets
+      - name: rm  Package
         run: |
           cd $WORKDIR
           rm -rf bin/packages || true
           rm -rf bin/targets/*/*/packages || true
           #如果未来目录层级产生变化使用以下命令删除packages
           ＃find bin -type d -name packages -exec rm -rf {} + || true
+      - name: Package targets
+        run: |
+          cd $WORKDIR
           ls bin/targets/*/*
           zip -j openwrt_targets.zip bin/targets/*/*
 
