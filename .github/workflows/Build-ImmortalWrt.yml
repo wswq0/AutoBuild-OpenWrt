@@ -99,17 +99,17 @@ jobs:
       - name: Package bin
         run: |
           cd $WORKDIR
-          rm -rf bin/packages || true
+          rm -rf bin/packages
           rm -rf bin/targets/*/*/packages || true
-          #如果未来目录层级产生变化使用以下命令删除packages
-          ＃find bin -type d -name packages -exec rm -rf {} + || true
-          zip -r immortalwrt_bin.zip bin
+          cd bin/targets/*/*
+          ls 
+          zip -r immortalwrt_bin.zip *
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: immortalwrt_bin
-          path: ${{ env.WORKDIR }}/immortalwrt_bin.zip
+          path: ${{ env.WORKDIR }}/bin/targets/*/*/immortalwrt_bin.zip
 
       - name: Create tag
         run: |
@@ -122,7 +122,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.TAG_NAME }}
-          files: ${{ env.WORKDIR }}/immortalwrt_bin.zip
+          files: ${{ env.WORKDIR }}/bin/targets/*/*/immortalwrt_bin.zip
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
