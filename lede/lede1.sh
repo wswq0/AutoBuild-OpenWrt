@@ -2,6 +2,9 @@
 #===============================================
 
 
+#Switch to branch 25.12
+sed -i 's#https://github.com/coolsnowwolf/luci.git;openwrt-23.05#https://github.com/coolsnowwolf/luci.git;openwrt-25.12#g' feeds.conf.default
+
 
 
 # Add a feed source
