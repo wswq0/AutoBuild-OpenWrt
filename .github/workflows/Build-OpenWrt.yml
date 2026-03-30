@@ -10,7 +10,7 @@ permissions:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
-  REPO_BRANCH: openwrt-25.12
+  REPO_BRANCH: main
   REPO_NAME: openwrt
   WORKDIR: /mnt/openwrt
   CCACHE_DIR: /mnt/ccache_openwrt
