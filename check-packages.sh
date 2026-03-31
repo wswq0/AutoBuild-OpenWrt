@@ -2,7 +2,7 @@
 set -e
 
 #################################################
-##################### 通用脚本 ###################
+
 #################################################
 
 ##################################################
@@ -12,28 +12,23 @@ set -e
 CHECK_PKGS=(
   luci-app-ttyd
   nano
+  vlmcsd
   luci-app-oaf
   open-app-filter
   oaf
   htop
   mosdns
   luci-app-mosdns
-  luci-i18n-mosdns-zh-cn
   luci-app-homeproxy
-  luci-i18n-homeproxy-zh-cn
-  luci-i18n-adguardhome-zh-cn
   luci-app-adguardhome
   nikki
   luci-app-nikki
-  luci-i18n-nikki-zh-cn
   cloudflared
   luci-app-cloudflared
   wireguard-tools
-  SING_BOX_BUILD_WIREGUARD
   kmod-wireguard
   luci-app-mwan3
   mwan3
-  luci-i18n-mwan3-zh-cn
 )
 
 echo "================================================="
