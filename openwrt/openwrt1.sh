@@ -15,11 +15,24 @@
 
 
 #vlmcsd
-#git clone https://github.com/openwrt-develop/openwrt-vlmcsd.git package/vlmcsd
-#git clone https://github.com/mchome/luci-app-vlmcsd.git package/luci-app-vlmcsd
+git clone https://github.com/mchome/luci-app-vlmcsd.git package/luci-app-vlmcsd
+
+git clone --depth=1 \
+  https://github.com/coolsnowwolf/packages.git \
+  -b master \
+  /tmp/package
+
+mkdir -p package/net/vlmcsd
+cp -r /tmp/package/net/vlmcsd/* package/net/vlmcsd/
+
+rm -rf /tmp/package
+
+
 
 #homeproxy
-#git clone https://github.com/immortalwrt/homeproxy.git package/homeproxy
+git clone https://github.com/immortalwrt/homeproxy.git package/homeproxy
+
+
 #mosdns
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
