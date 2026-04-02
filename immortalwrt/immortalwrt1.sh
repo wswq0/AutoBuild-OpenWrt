@@ -19,6 +19,6 @@ git clone --depth=1 \
   -b openwrt-25.12 \
   /tmp/luci
 
-mkdir -p package/luci
-cp -r /tmp/luci/applications/luci-app-adguardhome package/luci/
+mkdir -p package/adguardhome
+cp -r /tmp/luci/applications/luci-app-adguardhome package/adguardhome/
 rm -rf /tmp/luci
