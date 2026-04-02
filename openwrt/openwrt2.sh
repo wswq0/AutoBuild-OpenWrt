@@ -6,7 +6,12 @@ sed -i 's/192.168.1.1/192.168.5.1/g' $(pwd)/package/base-files/files/bin/config_
 #
 #
 #
-#add nano
-sed -i 's/^# CONFIG_PACKAGE_nano is not set/CONFIG_PACKAGE_nano=y/' .config
 
-sed -i 's/^# CONFIG_PACKAGE_nano is not set/CONFIG_PACKAGE_iperf3=y/' .config
+
+
+#add package
+cat >> .config <<EOF
+CONFIG_PACKAGE_nano=y
+CONFIG_PACKAGE_iperf3=y
+CONFIG_PACKAGE_luci-app-vlmcsd=y
+EOF
