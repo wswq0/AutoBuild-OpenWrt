@@ -8,6 +8,11 @@
 #OpenAppFilter    
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter    
 
+
+#add luci-app-mosdns
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+
+
 #add luci-app-adguardhome
 git clone --depth=1 \
   https://github.com/coolsnowwolf/luci.git \
